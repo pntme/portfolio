@@ -4,11 +4,11 @@
  *Version:1.1
  *-------------------------------------
  */
-(function($) {
+(function ($) {
 
     "use strict";
 
-    jQuery(document).ready(function() {
+    jQuery(document).ready(function () {
 
         /*
          * -----------------------------------------------------------------
@@ -18,7 +18,7 @@
 
 
 
-        jQuery(window).on("load", function() {
+        jQuery(window).on("load", function () {
 
             var preloader = jQuery('.preloader');
             var preloaderArea = jQuery('.preloader-area');
@@ -39,7 +39,7 @@
 
         // Prevent console.log from generating errors in IE for the purposes of the demo
         if (!window.console) console = {
-            log: function() {}
+            log: function () {}
         };
 
 
@@ -54,13 +54,13 @@
 
         var scrollTopBtn = $("#scroll-top-area");
 
-        scrollTopBtn.on("click", function() {
+        scrollTopBtn.on("click", function () {
             $('html, body').animate({
                 scrollTop: 0
             }, 2000);
         });
 
-        $(window).on("scroll", function() {
+        $(window).on("scroll", function () {
             var top2 = $(window).scrollTop();
             if (top2 < 150) {
                 $("#scroll-top-area").css('display', 'none');
@@ -81,14 +81,14 @@
 
         var skillBtn = $(".skill-btn");
 
-        skillBtn.on("click", function() {
+        skillBtn.on("click", function () {
             $('html, body').animate({
                 scrollTop: ($("#portfolio").offset().top) - 60
             }, 2000);
         });
         var hireBtn = $(".hire-btn");
 
-        hireBtn.on("click", function() {
+        hireBtn.on("click", function () {
             $('html, body').animate({
                 scrollTop: ($("#contact").offset().top) - 60
             }, 2000);
@@ -106,7 +106,7 @@
 
         var element = $(".element");
 
-        $(function() {
+        $(function () {
             element.typed({
                 strings: ["Welcome! Welcome! Welcome"],
                 typeSpeed: 100,
@@ -126,7 +126,7 @@
 
         var animation1 = jQuery('.animation');
 
-        animation1.waypoint(function() {
+        animation1.waypoint(function () {
             var animation = $(this.element).attr('data-animation');
             $(this.element).css('opacity', '1');
             $(this.element).addClass("animated " + animation).delay(2000);
@@ -183,7 +183,7 @@
         });
 
 
-        $("div, html").on("click", function(event) {
+        $("div, html").on("click", function (event) {
             if (!$(event.target).hasClass(".menu a") &&
                 !$(event.target).hasClass("ul.slicknav_nav li a") &&
                 !$(event.target).hasClass("slicknav_menutxt") &&
@@ -194,7 +194,7 @@
             }
         });
 
-        $(window).scroll(function() {
+        $(window).scroll(function () {
             $('.menu').slicknav('close');
         })
 
@@ -202,7 +202,7 @@
 
 
 
-        $("#download").on("click", function(event) {
+        $("#download").on("click", function (event) {
             window.open(
                 'pnt.pdf',
                 '_blank' // <- This is what makes it open in a new window.
@@ -224,7 +224,19 @@
         var prog90 = $('.prog-90');
         var prog86 = $('.prog-86');
         var prog94 = $('.prog-94');
-        skill.waypoint(function() {
+        var prog99 = $('.prog-99');
+        var prog60 = $('.prog-60');
+        var prog20 = $('.prog-20');
+        skill.waypoint(function () {
+
+            prog60.css({
+                "width": "60%",
+                "transition": "2s ease-in"
+            });
+        }, {
+            offset: '60%'
+        });
+        skill.waypoint(function () {
 
             prog80.css({
                 "width": "80%",
@@ -233,7 +245,25 @@
         }, {
             offset: '80%'
         });
-        skill.waypoint(function() {
+        skill.waypoint(function () {
+
+            prog99.css({
+                "width": "99%",
+                "transition": "2s ease-in"
+            });
+        }, {
+            offset: '99%'
+        });
+        skill.waypoint(function () {
+
+            prog20.css({
+                "width": "20%",
+                "transition": "2s ease-in"
+            });
+        }, {
+            offset: '20%'
+        });
+        skill.waypoint(function () {
 
             prog90.css({
                 "width": "90%",
@@ -242,7 +272,7 @@
         }, {
             offset: '90%'
         });
-        skill.waypoint(function() {
+        skill.waypoint(function () {
 
             prog90.css({
                 "width": "90%",
@@ -251,7 +281,7 @@
         }, {
             offset: '90%'
         });
-        skill.waypoint(function() {
+        skill.waypoint(function () {
 
             prog86.css({
                 "width": "86%",
@@ -260,7 +290,7 @@
         }, {
             offset: '86%'
         });
-        skill.waypoint(function() {
+        skill.waypoint(function () {
 
             prog94.css({
                 "width": "94%",
@@ -291,7 +321,7 @@
 
         var contactSubmit = $('#contact-submit');
 
-        contactSubmit.on('click', function(e) {
+        contactSubmit.on('click', function (e) {
             e.preventDefault();
             var name = $('#name').val();
             var email = $('#email').val();
@@ -310,7 +340,7 @@
                     'action': 'contact',
                     'form': form
                 })
-            }).done(function(data) {
+            }).done(function (data) {
                 $('#contact .result').html(data);
 
                 $(".contact-form-area")[0].reset();
@@ -350,11 +380,11 @@
  *Version:1.1
  *-------------------------------------
  */
-(function($) {
+(function ($) {
 
     "use strict";
 
-    jQuery(document).ready(function() {
+    jQuery(document).ready(function () {
 
         /*
          * -----------------------------------------------------------------
@@ -364,7 +394,7 @@
 
 
 
-        jQuery(window).on("load", function() {
+        jQuery(window).on("load", function () {
 
             var preloader = jQuery('.preloader');
             var preloaderArea = jQuery('.preloader-area');
@@ -385,7 +415,7 @@
 
         // Prevent console.log from generating errors in IE for the purposes of the demo
         if (!window.console) console = {
-            log: function() {}
+            log: function () {}
         };
 
         // The actual plugin
@@ -394,10 +424,10 @@
             offset: singleNav.outerHeight(),
             filter: ':not(.external)',
             updateHash: true,
-            beforeStart: function() {
+            beforeStart: function () {
                 // console.log('begin scrolling');
             },
-            onComplete: function() {
+            onComplete: function () {
                 // console.log('done scrolling');
 
             }
@@ -415,13 +445,13 @@
 
         var scrollTopBtn = $("#scroll-top-area");
 
-        scrollTopBtn.on("click", function() {
+        scrollTopBtn.on("click", function () {
             $('html, body').animate({
                 scrollTop: 0
             }, 2000);
         });
 
-        $(window).on("scroll", function() {
+        $(window).on("scroll", function () {
             var top2 = $(window).scrollTop();
             if (top2 < 150) {
                 $("#scroll-top-area").css('display', 'none');
@@ -442,14 +472,14 @@
 
         var skillBtn = $(".skill-btn");
 
-        skillBtn.on("click", function() {
+        skillBtn.on("click", function () {
             $('html, body').animate({
                 scrollTop: ($("#portfolio").offset().top) - 60
             }, 2000);
         });
         var hireBtn = $(".hire-btn");
 
-        hireBtn.on("click", function() {
+        hireBtn.on("click", function () {
             $('html, body').animate({
                 scrollTop: ($("#contact").offset().top) - 60
             }, 2000);
@@ -467,7 +497,7 @@
 
         var element = $(".element");
 
-        $(function() {
+        $(function () {
             element.typed({
                 strings: ["Welcome! Welcome! Welcome!"],
                 typeSpeed: 100,
@@ -487,7 +517,7 @@
 
         var animation1 = jQuery('.animation');
 
-        animation1.waypoint(function() {
+        animation1.waypoint(function () {
             var animation = $(this.element).attr('data-animation');
             $(this.element).css('opacity', '1');
             $(this.element).addClass("animated " + animation).delay(2000);
@@ -558,7 +588,7 @@
         var prog90 = $('.prog-90');
         var prog86 = $('.prog-86');
         var prog94 = $('.prog-94');
-        skill.waypoint(function() {
+        skill.waypoint(function () {
 
             prog80.css({
                 "width": "80%",
@@ -567,7 +597,7 @@
         }, {
             offset: '80%'
         });
-        skill.waypoint(function() {
+        skill.waypoint(function () {
 
             prog90.css({
                 "width": "90%",
@@ -576,7 +606,7 @@
         }, {
             offset: '90%'
         });
-        skill.waypoint(function() {
+        skill.waypoint(function () {
 
             prog75.css({
                 "width": "75%",
@@ -585,7 +615,7 @@
         }, {
             offset: '75%'
         });
-        skill.waypoint(function() {
+        skill.waypoint(function () {
 
             prog86.css({
                 "width": "86%",
@@ -594,7 +624,7 @@
         }, {
             offset: '86%'
         });
-        skill.waypoint(function() {
+        skill.waypoint(function () {
 
             prog94.css({
                 "width": "94%",
@@ -625,7 +655,7 @@
 
         var contactSubmit = $('#contact-submit');
 
-        contactSubmit.on('click', function(e) {
+        contactSubmit.on('click', function (e) {
             e.preventDefault();
             var name = $('#name').val();
             var email = $('#email').val();
@@ -644,7 +674,7 @@
                     'action': 'contact',
                     'form': form
                 })
-            }).done(function(data) {
+            }).done(function (data) {
                 $('#contact .result').html(data);
 
                 $(".contact-form-area")[0].reset();
@@ -682,7 +712,7 @@
 
 
             },
-            submitHandler: function(form) { // for demo
+            submitHandler: function (form) { // for demo
                 alert('valid form submitted'); // for demo
                 return false; // for demo
             }

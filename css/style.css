@@ -70,12 +70,25 @@ body {
     font-size: 25px;
 }
 
+.portfolio-img img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* 667, 300 */
+
+@media screen and (max-width: 667px) {
+    .icon_un {
+       width: 300px;
+    }
+}
+
 
 /*-----------------header-----------------*/
 
 header {
     height: 80px;
-    line-height: 80px;
     background: #fff;
     position: fixed;
     z-index: 5;
@@ -84,9 +97,45 @@ header {
     box-shadow: 0px 0px 5px #888888;
 }
 
-header a .logo {
-    display: inline-block;
-    float: left;
+header .col-md-9 {
+    line-height: 80px;
+}
+
+blockquote {
+    font-size: 22px;
+    margin: .5em 10px;
+    padding: 0 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    padding: 10px 20px;
+    line-height: 1.4;
+    margin-top: 87px;
+}
+
+blockquote:before {
+    content: open-quote;
+    display: inline;
+    height: 0;
+    line-height: 0;
+    left: -10px;
+    position: relative;
+    top: 30px;
+    color: #ccc;
+    font-size: 3em;
+}
+
+header .col-md-3 {
+    margin-top: 20px;
+    color: #0F4D6F;
+}
+
+header .col-md-3 span {
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 header nav {
@@ -322,7 +371,9 @@ canvas {
 }
 
 .skill-heading-area h6,
+.skill-heading-area span,
 .skill-heading-area h4,
+.skill-heading-area ul,
 .skill-heading-area p {
     color: #fff;
 }
@@ -476,7 +527,7 @@ canvas {
     width: 36px;
 }
 
-.skills .progress-bar > span::before {
+.skills .progress-bar>span::before {
     position: absolute;
     bottom: -4px;
     left: 12px;
