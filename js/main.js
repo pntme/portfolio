@@ -108,7 +108,7 @@
 
         $(function () {
             element.typed({
-                strings: ["Welcome! Welcome! Welcome"],
+                strings: ["Web | iOS | Android | Desktop | PWA | AMP"],
                 typeSpeed: 100,
                 loop: true,
             });
@@ -499,7 +499,7 @@
 
         $(function () {
             element.typed({
-                strings: ["Welcome! Welcome! Welcome!"],
+                strings: ["Web | iOS | Android | Desktop | PWA | AMP"],
                 typeSpeed: 100,
                 loop: true,
             });
@@ -713,8 +713,27 @@
 
             },
             submitHandler: function (form) { // for demo
-                alert('valid form submitted'); // for demo
-                return false; // for demo
+                console.log(form) // for demo
+
+                var name = $('#form_name').val(),
+                    email = $('#form_email').val(),
+                    message = $('#form_message').val();
+
+                $.ajax({
+                    type: "POST",
+                    url: "email-php.php",
+                    data: {
+                        name: name,
+                        email: email,
+                        message: message
+                    },
+                    success: function (data) {
+                        alert(data);
+                        return false;
+                    }
+                });
+
+                // for demo
             }
         });
 

@@ -5,7 +5,6 @@
 *-------------------------------------
 */
 
-
 /*--------Table of Content----------
 * 1.preloader and scroll top button
 * 2.header
@@ -20,7 +19,6 @@
 * 11.footer
 *----------------------------------
 */
-
 
 /*-----------------preloader-----------------*/
 
@@ -50,7 +48,6 @@ body {
     width: 200px;
 }
 
-
 /*-----------------scroll-top-button-----------------*/
 
 #scroll-top-area {
@@ -75,15 +72,13 @@ body {
     margin: 0 auto;
 }
 
-
 /* 667, 300 */
 
 @media screen and (max-width: 667px) {
     .icon_un {
-       width: 300px;
+        width: 300px;
     }
 }
-
 
 /*-----------------header-----------------*/
 
@@ -140,6 +135,7 @@ header .col-md-3 span {
 
 header nav {
     float: right;
+    font-size: 1.3rem;
 }
 
 header nav ul li {
@@ -187,7 +183,6 @@ header nav ul li a:active::after {
     background-color: #fff;
 }
 
-
 /*-----------------------welcome section------------------*/
 
 canvas {
@@ -203,7 +198,7 @@ canvas {
 
 .image-bg {
     background-size: cover;
-    background: url("../images/img-bg.jpg");
+    background: url("../images/2.png");
 }
 
 .image-bg.welcome-area {
@@ -289,7 +284,6 @@ canvas {
     }
 }
 
-
 /*------------------about section---------------------------*/
 
 .about .section-title {
@@ -334,6 +328,7 @@ canvas {
     width: 100%;
     height: 59px;
     transition: all 0.5s;
+    bottom: 0;
 }
 
 .about-img:hover .about-img-overlay {
@@ -354,7 +349,6 @@ canvas {
 .about-img-overlay .social-icons a:hover {
     color: #164E71;
 }
-
 
 /*----------------skills section--------------------*/
 
@@ -385,6 +379,12 @@ canvas {
 .skill-heading-area h4 {
     padding-top: 30px;
     padding-bottom: 20px;
+}
+
+.downloadButton {
+    display: block;
+    margin-top: 1px;
+    text-align: center;
 }
 
 .skill-overlay {
@@ -438,7 +438,6 @@ canvas {
     border-bottom-left-radius: 4px;
 }
 
-
 /*.contact-text{
     display: none;
 }*/
@@ -462,6 +461,14 @@ canvas {
     }
 }
 
+@media (max-width: 800px) {
+    .downloadButton {
+        display: block;
+        margin-top: -58px;
+        text-align: center;
+    }
+}
+
 @media (max-width: 700px) {
     .contact-text {
         font-size: 12px;
@@ -469,6 +476,12 @@ canvas {
     .skills {
         background-color: #F9F9F9;
     }
+    .downloadButton {
+        display: block;
+        margin-top: -58px;
+        text-align: center;
+    }
+   
 }
 
 @media (max-width: 560px) {
@@ -540,7 +553,6 @@ canvas {
     ;
 }
 
-
 /*-----------------services section-----------------*/
 
 .services {
@@ -592,7 +604,6 @@ canvas {
     background: #164E71;
     transition: all 0.5s;
 }
-
 
 /*-----------------------portfolio section-----------------*/
 
@@ -696,7 +707,6 @@ canvas {
     cursor: pointer;
 }
 
-
 /*-----------------blog section-----------------*/
 
 .blog {
@@ -762,7 +772,6 @@ canvas {
 .blog-description .blog-text .read-btn {
     margin-top: 10px;
 }
-
 
 /*---------------------experience section---------------------*/
 
@@ -901,7 +910,6 @@ canvas {
     left: 20px;
 }
 
-
 /*-------------------testimonial section---------------*/
 
 #client-testimonial {
@@ -1014,7 +1022,6 @@ canvas {
     font-size: 14px;
 }
 
-
 /*------------------contact section-------------*/
 
 .contact {
@@ -1120,7 +1127,6 @@ form #email {
 .contact-form {
     padding: 0px 50px;
 }
-
 
 /*---------------footer-------------*/
 
